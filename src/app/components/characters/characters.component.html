@@ -1,0 +1,19 @@
+<div class="container mt-3">
+    <h2 class="mb-4">List characters</h2>
+    <div class="position-center w-fit" *ngIf="characters.length == 0">
+        <mat-spinner></mat-spinner>
+    </div>
+    
+    <div *ngIf="characters.length > 0">
+        <div class="bg-grey mb-3 text-end">
+            <button mat-icon-button [color]="viewList ? '' : 'primary'" (click)="toggleView('cards')" aria-label="cards view"><mat-icon fontIcon="view_module"></mat-icon></button>
+            <button mat-icon-button [color]="viewList ? 'primary' : ''" (click)="toggleView('list')" aria-label="list view"><mat-icon fontIcon="view_list"></mat-icon></button>
+        </div>
+        <div *ngIf="viewList" class="mr-5 ml-5" [@gridAnimation]>
+            <app-grid *ngFor="let character of characters" [character]="character"></app-grid>
+        </div>
+        <div *ngIf="!viewList" class="flex-cols-card" [@cardAnimation]>
+            <app-card *ngFor="let character of characters" [character]="character" class="w-card mb-4"></app-card>
+        </div>
+    </div>
+</div>

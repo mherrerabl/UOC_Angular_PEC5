@@ -1,1 +1,449 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+:root {
+  --primary: #3f51b5;
+  --secundary: #FEBC00;
+  --grey: #E9E9E9;
+  --dark-grey: #757575;
+  --space: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {  
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+:is(a, a>*):hover {
+  color: var(--secundary);
+}
+
+app-root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+app-characters, app-character {
+  flex-grow: 1;
+}
+
+
+
+h1 {
+  background-color: var(--primary);
+  color: white;
+  padding: 15px 25px;
+}
+
+h2 {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 15px;
+}
+
+h3 {
+  background-color: var(--primary);
+  color: white;
+  padding: 5px 10px;
+}
+
+
+/**** COMPONENTS ****/
+.container {
+  margin: 0 auto;
+
+  @media screen and (min-width: 576px) {
+    max-width: 95vw;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: calc(768px - 5vw);
+  }
+
+  @media screen and (min-width: 992px) {
+    max-width: calc(992px - 5vw);
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+
+.floatButton {
+  position: absolute !important;
+  right: 0%;
+  top: 50%;
+  transform: translate(-15px, -50%);
+}
+
+.grid-cols-detail {
+  grid-template-columns: 100%;
+
+  @media screen and (min-width: 576px) {
+    grid-template-columns: 75% 20%;
+  }
+}
+
+.flex-cols-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.w-card {
+  width: 100%;
+
+  @media screen and (min-width: 576px) {
+    width: 47%;
+  }
+
+  @media screen and (min-width: 992px) {
+    width: 30%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 22%;
+  }
+}
+
+
+
+/**** CLASES ****/
+/** Positions and display **/
+.relative {
+  position: relative;
+}
+
+.grid {
+  display: grid;
+}
+
+
+
+/** Tipography **/
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.text-white {
+  color: white;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-grey {
+  background-color: var(--grey);
+}
+
+
+/** Sizes **/
+.w-full {
+  width: 100%;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-25 {
+  height: calc(25 * var(--space));
+}
+
+.gap-5 {
+  gap: 5%;
+}
+
+
+/** Borders **/
+.rounded-full {
+  border-radius: 50%;
+}
+
+.rounded-15 {
+  border-radius: 15px;
+}
+
+.rounded-left-15 {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.rounded-right-15 {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.border-1-grey {
+  border: 1px solid var(--grey);
+}
+
+
+/** Cursor **/
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+
+
+
+/**** SPACES ****/
+/** Margins **/
+.m-auto {
+  margin: 0 auto;
+}
+
+.m-1 {
+  margin: calc(1 * var(--space));
+}
+.m-2 {
+  margin: calc(2 * var(--space));
+}
+.m-3 {
+  margin: calc(3 * var(--space));
+}
+.m-4 {
+  margin: calc(4 * var(--space));
+}
+.m-5 {
+  margin: calc(5 * var(--space));
+}
+
+.mt-1 {
+  margin-top: calc(1 * var(--space));
+}
+.mt-2 {
+  margin-top: calc(2 * var(--space));
+}
+.mt-3 {
+  margin-top: calc(3 * var(--space));
+}
+.mt-4 {
+  margin-top: calc(4 * var(--space));
+}
+.mt-5 {
+  margin-top: calc(5 * var(--space));
+}
+
+.mb-1 {
+  margin-bottom: calc(1 * var(--space));
+}
+.mb-2 {
+  margin-bottom: calc(2 * var(--space));
+}
+.mb-3 {
+  margin-bottom: calc(3 * var(--space));
+}
+.mb-4 {
+  margin-bottom: calc(4 * var(--space));
+}
+.mb-5 {
+  margin-bottom: calc(5 * var(--space));
+}
+
+.ml-1 {
+  margin-left: calc(1 * var(--space));
+}
+.ml-2 {
+  margin-left: calc(2 * var(--space));
+}
+.ml-3 {
+  margin-left: calc(3 * var(--space));
+}
+.ml-4 {
+  margin-left: calc(4 * var(--space));
+}
+.ml-5 {
+  margin-left: calc(5 * var(--space));
+}
+
+.mr-1 {
+  margin-right: calc(1 * var(--space));
+}
+.mr-2 {
+  margin-right: calc(2 * var(--space));
+}
+.mr-3 {
+  margin-right: calc(3 * var(--space));
+}
+.mr-4 {
+  margin-right: calc(4 * var(--space));
+}
+.mr-5 {
+  margin-right: calc(5 * var(--space));
+}
+
+
+/** Paddings **/
+.p-1 {
+  padding: calc(1 * var(--space));
+}
+.p-2 {
+  padding: calc(2 * var(--space));
+}
+.p-3 {
+  padding: calc(3 * var(--space));
+}
+.p-4 {
+  padding: calc(4 * var(--space));
+}
+.p-5 {
+  padding: calc(5 * var(--space));
+}
+
+.pt-1 {
+  padding-top: calc(1 * var(--space));
+}
+.pt-2 {
+  padding-top: calc(2 * var(--space));
+}
+.pt-3 {
+  padding-top: calc(3 * var(--space));
+}
+.pt-4 {
+  padding-top: calc(4 * var(--space));
+}
+.pt-5 {
+  padding-top: calc(5 * var(--space));
+}
+
+.pb-1 {
+  padding-bottom: calc(1 * var(--space));
+}
+.pb-2 {
+  padding-bottom: calc(2 * var(--space));
+}
+.pb-3 {
+  padding-bottom: calc(3 * var(--space));
+}
+.pb-4 {
+  padding-bottom: calc(4 * var(--space));
+}
+.pb-5 {
+  padding-bottom: calc(5 * var(--space));
+}
+
+.pl-1 {
+  padding-left: calc(1 * var(--space));
+}
+.pl-2 {
+  padding-left: calc(2 * var(--space));
+}
+.pl-3 {
+  padding-left: calc(3 * var(--space));
+}
+.pl-4 {
+  padding-left: calc(4 * var(--space));
+}
+.pl-5 {
+  padding-left: calc(5 * var(--space));
+}
+
+.pr-1 {
+  padding-right: calc(1 * var(--space));
+}
+.pr-2 {
+  padding-right: calc(2 * var(--space));
+}
+.pr-3 {
+  padding-right: calc(3 * var(--space));
+}
+.pr-4 {
+  padding-right: calc(4 * var(--space));
+}
+.pr-5 {
+  padding-right: calc(5 * var(--space));
+}
+
+
+
+
+/**** UTILITIES ****/
+.mat-grid-tile-content {
+  justify-content: flex-start !important;
+}
+
+.mat-typography h2.mb-4 {
+  margin-bottom: calc(4 * var(--space)) !important;
+}
+
+.mat-typography h4.mt-2 {
+  margin-top: calc(2 * var(--space)) !important;
+}
+
+.mat-mdc-tab-body-content {
+  overflow: hidden !important;
+}
+
+.mat-grid-tile-id {
+  width: 75px !important;
+}
+
+.mat-grid-tile-id .mat-grid-tile-content {
+  justify-content: center !important;
+}
+
+.mat-grid-tile-name {
+  left: calc(0% + 75px) !important;
+  width: calc(100% - 100px) !important;
+  border-left: transparent;
+}
+
+.mat-grid-tile-name .mat-grid-tile-content {
+  left: 15px !important;
+}
+
+.mat-mdc-icon-button .mat-mdc-button-persistent-ripple, .mat-ripple {
+  border-radius: 0 !important;
+}
+
+
+
+/**** Hover and focus ****/
+mat-grid-list:is(:hover, :focus) .border-1-grey {
+  border: 1px solid var(--primary);
+}
+
+mat-grid-list:is(:hover, :focus) .bg-grey {
+  background-color: var(--primary);
+  color: white;
+}
+
+
+mat-card:is(:hover, :focus) {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0px 0px 18px 4px var(--primary);
+}
