@@ -43,22 +43,16 @@ app-characters, app-character {
 
 
 
-h1 {
-  background-color: var(--primary);
-  color: white;
-  padding: 15px 25px;
-}
-
 h2 {
   background-color: var(--primary);
   color: white;
-  padding: 10px 15px;
+  padding: 10px 20px;
 }
 
 h3 {
   background-color: var(--primary);
   color: white;
-  padding: 5px 10px;
+  padding: 5px 20px;
 }
 
 
@@ -140,6 +134,10 @@ h3 {
   display: grid;
 }
 
+.flex {
+  display: flex;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -200,6 +198,9 @@ h3 {
   gap: 5%;
 }
 
+.items-center {
+  align-items: center;
+}
 
 /** Borders **/
 .rounded-full {
@@ -220,6 +221,10 @@ h3 {
 /** Margins **/
 .m-auto {
   margin: 0 auto;
+}
+
+.m-0 {
+  margin: 0 !important;
 }
 
 .m-1 {

@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { CardComponent } from './components/shared/card/card.component';
 import { GridComponent } from './components/shared/grid/grid.component';
+import { HeaderComponent } from './components/shared/header/header.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { GridComponent } from './components/shared/grid/grid.component';
     CharacterComponent,
     CardComponent,
     GridComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
