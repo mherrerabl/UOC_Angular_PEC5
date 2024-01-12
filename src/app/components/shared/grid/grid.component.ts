@@ -7,5 +7,6 @@ import { CharacterDTO } from 'src/app/models/character.dto';
   styleUrls: ['./grid.component.css'],
 })
 export class GridComponent {
-  @Input() character!: CharacterDTO;
+  @Input() characters!: CharacterDTO[];
+  displayedColumns: string[] = ['id', 'name'];
 }

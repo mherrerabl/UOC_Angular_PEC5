@@ -1,0 +1,32 @@
+table {
+    border-spacing: 0 calc(2 * var(--space)) !important;
+}
+
+.mat-mdc-table .mat-mdc-row {
+    margin-bottom: calc(2 * var(--space)) !important;
+    height: 40px !important;
+    cursor: pointer;
+}
+
+.mat-column-name {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid var(--grey);
+}
+
+.mat-column-id {
+    background-color: var(--grey) !important;
+    width: 50px; 
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: 1px solid var(--grey);
+}
+
+.mat-mdc-table .mat-mdc-row:hover :is(.mat-column-id, .mat-column-name) {
+    border: 1px solid var(--primary) !important;
+}
+
+.mat-mdc-table .mat-mdc-row:hover .mat-column-id {
+    background-color: var(--primary) !important;
+    color: white;
+}

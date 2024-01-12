@@ -14,7 +14,7 @@ export class CharactersService {
 
   getAllCharacters(): Observable<MarvelDTO> {
     return this.http.get<MarvelDTO>(
-      'https://gateway.marvel.com/v1/public/characters?limit=50&' + this.apikey
+      'https://gateway.marvel.com/v1/public/characters?limit=100&' + this.apikey
     );
   }
 

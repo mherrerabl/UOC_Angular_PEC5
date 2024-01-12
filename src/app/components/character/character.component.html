@@ -2,6 +2,10 @@
     <p>You're offline. You have never visited this page before, therefore we cannot reload data.</p>
 </div>
 
+<div class="position-center w-fit" *ngIf="isOnline && !character">
+    <mat-spinner></mat-spinner>
+</div>
+
 <div class="container mt-3" *ngIf="character">
     <div class="relative">
         <h2>{{ character.name }}</h2>

@@ -1,5 +1,17 @@
-<mat-grid-list cols="2" rowHeight="40px" [routerLink]="['/character', character.id]" class="cursor-pointer mb-2 list-item">
-    <mat-grid-tile class="mat-grid-tile-id bg-grey rounded-left-15 border-1-grey">{{ character.id }}</mat-grid-tile>
-    <mat-grid-tile class="mat-grid-tile-name rounded-right-15 border-1-grey">{{ character.name }}</mat-grid-tile>
-</mat-grid-list>
+<table mat-table [dataSource]="characters">
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let character" [routerLink]="['/character', character.id]"> {{character.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let character" [routerLink]="['/character', character.id]"> {{character.name}} </td>
+    </ng-container>
+    
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="list-item"></tr>
+</table>
+
   

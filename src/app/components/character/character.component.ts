@@ -30,6 +30,7 @@ export class CharacterComponent implements OnInit {
     } else {
       this.router.navigateByUrl('/');
     }
+    console.log(window.navigator.onLine);
   }
 
   toggleInfo(): void {

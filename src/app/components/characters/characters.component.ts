@@ -82,9 +82,19 @@ export class CharactersComponent implements OnInit {
     this.charactersService
       .getAllCharacters()
       .subscribe((res) => (this.characters = res.data.results));
+
+    if (localStorage.getItem('viewType') !== (undefined && null)) {
+      this.toggleView(localStorage.getItem('viewType'));
+    }
   }
 
-  toggleView(type: string): void {
-    type == 'list' ? (this.viewList = true) : (this.viewList = false);
+  toggleView(type: string | null): void {
+    if (type == 'list') {
+      this.viewList = true;
+      localStorage.setItem('viewType', 'list');
+    } else if (type == 'cards') {
+      this.viewList = false;
+      localStorage.setItem('viewType', 'cards');
+    }
   }
 }

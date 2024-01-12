@@ -191,24 +191,6 @@ h3 {
   border-radius: 50%;
 }
 
-.rounded-15 {
-  border-radius: 15px;
-}
-
-.rounded-left-15 {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-}
-
-.rounded-right-15 {
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-
-.border-1-grey {
-  border: 1px solid var(--grey);
-}
-
 
 /** Cursor **/
 .cursor-pointer {
@@ -391,10 +373,6 @@ h3 {
 
 
 /**** UTILITIES ****/
-.mat-grid-tile-content {
-  justify-content: flex-start !important;
-}
-
 .mat-typography h2.mb-4 {
   margin-bottom: calc(4 * var(--space)) !important;
 }
@@ -407,43 +385,6 @@ h3 {
   overflow: hidden !important;
 }
 
-.mat-grid-tile-id {
-  width: 75px !important;
-}
-
-.mat-grid-tile-id .mat-grid-tile-content {
-  justify-content: center !important;
-}
-
-.mat-grid-tile-name {
-  left: calc(0% + 75px) !important;
-  width: calc(100% - 100px) !important;
-  border-left: transparent;
-}
-
-.mat-grid-tile-name .mat-grid-tile-content {
-  left: 15px !important;
-}
-
 .mat-mdc-icon-button .mat-mdc-button-persistent-ripple, .mat-ripple {
   border-radius: 0 !important;
-}
-
-
-
-/**** Hover and focus ****/
-mat-grid-list:is(:hover, :focus) .border-1-grey {
-  border: 1px solid var(--primary);
-}
-
-mat-grid-list:is(:hover, :focus) .bg-grey {
-  background-color: var(--primary);
-  color: white;
-}
-
-
-mat-card:is(:hover, :focus) {
-  background-color: var(--primary);
-  color: white;
-  box-shadow: 0px 0px 18px 4px var(--primary);
 }
