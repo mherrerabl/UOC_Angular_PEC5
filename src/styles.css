@@ -140,6 +140,17 @@ h3 {
   display: grid;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.object-left {
+  object-position: left;
+}
 
 
 /** Tipography **/
@@ -175,6 +186,10 @@ h3 {
 
 .h-full {
   height: 100%;
+}
+
+.min-h-full {
+  min-height: 100%;
 }
 
 .h-25 {

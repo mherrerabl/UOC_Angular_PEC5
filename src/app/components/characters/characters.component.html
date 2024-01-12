@@ -14,7 +14,7 @@
             <app-grid [characters]="characters"></app-grid>
         </div>
         <div *ngIf="!viewList" class="flex-cols-card" [@cardAnimation]>
-            <app-card *ngFor="let character of characters" [character]="character" class="w-card mb-4"></app-card>
+            <app-card *ngFor="let character of characters" [character]="character" class="w-card mb-4 p-1"></app-card>
         </div>
     </div>
 </div>

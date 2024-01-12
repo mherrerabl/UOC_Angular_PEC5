@@ -3,7 +3,10 @@
       <mat-card-title>{{ character.name }}</mat-card-title>
       <mat-card-subtitle>ID: {{ character.id }}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" [alt]="character.name" class="h-25">
+    <div class="h-25 overflow-hidden">
+      <img mat-card-image src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" [alt]="character.name" class="w-full min-h-full object-cover object-left">
+    </div>
+    
     <mat-card-content class="mt-2">
         <p *ngIf="character.description">{{ character.description }}</p>
         <p *ngIf="!character.description">Description not available</p>
