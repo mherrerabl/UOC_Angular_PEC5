@@ -110,14 +110,14 @@
      "src": "assets/screenshots/screenshots-412.jpg",
       "sizes": "395x688",
       "type": "image/jpg",
-      "form_factor": "wide",
+      "form_factor": "narrow",
       "label": "Marvel Characters"
     },
      {
       "src": "assets/screenshots/screenshots-1024.jpg",
        "sizes": "1006x901",
        "type": "image/jpg",
-       "form_factor": "narrow",
+       "form_factor": "wide",
        "label": "Marvel Characters"
      }
 ]
