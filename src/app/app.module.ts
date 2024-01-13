@@ -20,6 +20,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { CardComponent } from './components/shared/card/card.component';
 import { GridComponent } from './components/shared/grid/grid.component';
 import { HeaderComponent } from './components/shared/header/header.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HeaderComponent } from './components/shared/header/header.component';
     CardComponent,
     GridComponent,
     HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
